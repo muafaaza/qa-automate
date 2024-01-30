@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.4 on darwin)" generated="20231222 13:10:17.772" rpa="false" schemaversion="4">
+<suite id="s1" name="Scenario" source="/Users/muafaaza/Desktop/Robot/axa/scenario/menu-pim/scenario.robot">
+<test id="s1-t1" name="User Masuk Menu PIM" line="6">
+<kw name="Given - Masuk ke link" library="menu_pim">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${link}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231222 13:10:17.909" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20231222 13:10:17.909" endtime="20231222 13:10:30.770"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231222 13:10:35.771" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231222 13:10:30.770" endtime="20231222 13:10:35.772"/>
+</kw>
+<status status="PASS" starttime="20231222 13:10:17.908" endtime="20231222 13:10:35.772"/>
+</kw>
+<kw name="Then - User Login" library="menu_pim">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_username}</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231222 13:10:35.774" level="INFO">Typing text 'Admin' into text field '(//input[@placeholder='Username'])[1]'.</msg>
+<status status="PASS" starttime="20231222 13:10:35.773" endtime="20231222 13:10:39.113"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231222 13:10:39.615" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231222 13:10:39.113" endtime="20231222 13:10:39.615"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${text_password}</arg>
+<arg>admin123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231222 13:10:39.618" level="INFO">Typing password into text field '(//input[@placeholder='Password'])[1]'.</msg>
+<msg timestamp="20231222 13:10:39.923" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231222 13:10:40.416" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231222 13:10:39.616" endtime="20231222 13:10:40.416"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231222 13:10:40.919" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231222 13:10:40.417" endtime="20231222 13:10:40.920"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231222 13:10:40.922" level="INFO">Clicking element '(//button[normalize-space()='Login'])[1]'.</msg>
+<status status="PASS" starttime="20231222 13:10:40.921" endtime="20231222 13:10:41.305"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231222 13:10:51.306" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231222 13:10:41.305" endtime="20231222 13:10:51.307"/>
+</kw>
+<status status="PASS" starttime="20231222 13:10:35.773" endtime="20231222 13:10:51.307"/>
+</kw>
+<kw name="Then - User masuk menu PIM" library="menu_pim">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${menu_pim}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231222 13:10:51.308" level="INFO">Clicking element '(//li[@class='oxd-main-menu-item-wrapper'])[2]'.</msg>
+<status status="PASS" starttime="20231222 13:10:51.307" endtime="20231222 13:10:59.193"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231222 13:11:02.194" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231222 13:10:59.193" endtime="20231222 13:11:02.194"/>
+</kw>
+<status status="PASS" starttime="20231222 13:10:51.307" endtime="20231222 13:11:02.194"/>
+</kw>
+<kw name="Then - User melakukan search berdasarkan employee name" library="menu_pim">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_employeename}</arg>
+<arg>Alice</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231222 13:11:02.196" level="INFO">Typing text 'Alice' into text field '(//input[@placeholder])[2]'.</msg>
+<status status="PASS" starttime="20231222 13:11:02.195" endtime="20231222 13:11:06.477"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231222 13:11:07.480" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231222 13:11:06.478" endtime="20231222 13:11:07.480"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231222 13:11:07.481" level="INFO">Clicking element '//button[normalize-space()='Search']'.</msg>
+<status status="PASS" starttime="20231222 13:11:07.480" endtime="20231222 13:11:08.774"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231222 13:11:11.776" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231222 13:11:08.774" endtime="20231222 13:11:11.777"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231222 13:11:11.781" level="INFO">Executing JavaScript:
+window.scrollTo(0,2500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20231222 13:11:11.778" endtime="20231222 13:11:11.817"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231222 13:11:13.819" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231222 13:11:11.817" endtime="20231222 13:11:13.820"/>
+</kw>
+<status status="PASS" starttime="20231222 13:11:02.195" endtime="20231222 13:11:13.820"/>
+</kw>
+<kw name="Then - User Menghapus data employee" library="menu_pim">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_delete}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231222 13:11:13.824" level="INFO">Clicking element '(//button[@type='button'])[5]'.</msg>
+<status status="PASS" starttime="20231222 13:11:13.822" endtime="20231222 13:11:14.413"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231222 13:11:15.415" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231222 13:11:14.413" endtime="20231222 13:11:15.416"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_confirmdelete}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231222 13:11:15.418" level="INFO">Clicking element '(//button[normalize-space()='Yes, Delete'])[1]'.</msg>
+<status status="PASS" starttime="20231222 13:11:15.417" endtime="20231222 13:11:15.822"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231222 13:11:25.823" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231222 13:11:15.822" endtime="20231222 13:11:25.824"/>
+</kw>
+<status status="PASS" starttime="20231222 13:11:13.822" endtime="20231222 13:11:25.824"/>
+</kw>
+<kw name="Then - User melakukan search berdasarkan employee name" library="menu_pim">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_employeename}</arg>
+<arg>Alice</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231222 13:11:25.827" level="INFO">Typing text 'Alice' into text field '(//input[@placeholder])[2]'.</msg>
+<status status="PASS" starttime="20231222 13:11:25.825" endtime="20231222 13:11:26.117"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231222 13:11:27.119" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231222 13:11:26.117" endtime="20231222 13:11:27.120"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231222 13:11:27.122" level="INFO">Clicking element '//button[normalize-space()='Search']'.</msg>
+<status status="PASS" starttime="20231222 13:11:27.120" endtime="20231222 13:11:27.881"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231222 13:11:30.883" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231222 13:11:27.881" endtime="20231222 13:11:30.883"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231222 13:11:30.886" level="INFO">Executing JavaScript:
+window.scrollTo(0,2500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20231222 13:11:30.884" endtime="20231222 13:11:30.894"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231222 13:11:32.896" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231222 13:11:30.894" endtime="20231222 13:11:32.897"/>
+</kw>
+<status status="PASS" starttime="20231222 13:11:25.825" endtime="20231222 13:11:32.897"/>
+</kw>
+<status status="PASS" starttime="20231222 13:10:17.908" endtime="20231222 13:11:32.898"/>
+</test>
+<status status="PASS" starttime="20231222 13:10:17.774" endtime="20231222 13:11:32.900"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Scenario">Scenario</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
